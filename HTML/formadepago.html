@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/CSS/style.css">
+
+
+  <!-- CON BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+  <!-- AQUI TERMINA EL HEAD CON BOOTSTRAP -->
+</head>
+
+<body>
+  <!-- Class container es como el wrap -->
+  <!-- class row permite controlar las columnas -->
+  <!-- CON BOOTSTRAP -->
+  <!-- EMPIEZA ENCABEZADO -->
+  <header class="container py-4">
+
+
+    <div class="row">
+      <div class="col-2">
+        <a href="#" class="h5">
+          <i class="bi bi-bullseye">LasCositasDeMibel</i>
+        </a>
+      </div>
+      <div class="col-8">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Que necesitas buscar" aria-label="Recipient's username"
+            aria-describedby="button-addon2" />
+          <button class="btn btn-primary" type="button" id="button-addon2">
+            Ir
+          </button>
+        </div>
+      </div>
+      <div class="col-2 d-grid">
+        <button type="button" class="btn btn-primary position-relative">
+          Carrito <i class="bi bi-cart4"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            99+
+            <span class="visually-hidden">Productos</span>
+          </span>
+        </button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-6">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Patrones gratis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Materiales de costura</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Videos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Fotos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre mi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <!-- AQUI TERMINA EL HEADER -->
+
+  <!-- COMIENZAN LAS FORMAS DE PAGO-->
+
+
+  <!-- COMIENZA INPUT TARJETAS DE CREDITO-->
+  <section class="container g-5">
+    
+    <div class="row">
+      <h4 class="mb-3">Formas de pago</h4>
+      <!-- TARJETAS YA GUARDADAS -->
+      <div class="border border-2 m-lg-10">
+      <h5 class="mb-3">Mis tarjetas</h5>
+      <form>
+        <!-- primera tarjeta -->
+        <div class="mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card"
+            viewBox="0 0 16 16">
+            <path
+              d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
+            <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z" />
+          </svg>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Seleccione tarjeta de crédito</option>
+            <option value="1">Mastercard 6395...</option>
+            <option value="2">Mastercard 8022...</option>
+            <option value="3">Mastercard 1363...</option>
+          </select>
+          <!-- boton -->
+          <button type="submit" class="btn btn-primary">Pagar con esta tarjeta</button>
+      </form>
+      </div>
+  </section>
+  <!-- NUEVA TARJETA -->
+    <section class="container g-5"> 
+      <h5 class="mb-3">Añadir nueva tarjeta</h5>
+      <div class="my-3">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Tarjeta de crédito
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Tarjeta de débito
+          </label>
+        </div>
+        <!-- col-sm-5 col-md-6">.col-sm-5 .col-md-6 -->
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Paypal
+          </label>
+        </div>
+  </section>
+  <section class="container">
+    <div class="row">
+      <div class="col-sm-3">
+        <input type="text" class="form-control" placeholder="Nombre titular tarjeta" aria-label="City">
+      </div>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" placeholder="Número de tajeta de crédito" aria-label="City">
+      </div>
+      <div class="w-50"></div>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" placeholder="Vencimiento" aria-label="State">
+      </div>
+      <div class="col-sm-3">
+        <input type="text" class="form-control" placeholder="Cvv" aria-label="State">
+      </div>
+
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3"
+            aria-describedby="invalidCheck3Feedback" required>
+          <label class="form-check-label" for="invalidCheck3">
+            Acepto los términos y condiciones.
+          </label>
+          <div id="invalidCheck3Feedback" class="invalid-feedback">
+            Debe aceptar antes de enviar.
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <!-- garantias  -->
+
+  <section class="container py-5">
+    <div class="row">
+      <div class="col-3 d-flex gap-3 align-items-center">
+        <i class="bi bi-shield-check text-primary h1"></i>
+        <h5>Pago seguro</h5>
+      </div>
+      <div class="col-3 d-flex gap-3 align-items-center">
+        <i class="bi bi-truck text-primary h1"></i>
+        <h5>Envío gratuito</h5>
+      </div>
+      <div class="col-3 d-flex gap-3 align-items-center">
+        <i class="bi bi-box text-primary h1"></i>
+        <h5>Mejores ofertas</h5>
+      </div>
+      <div class="col-3 d-flex gap-3 align-items-center">
+        <i class="bi bi-bookmark-check text-primary h1"></i>
+        <h5>2 años de garantía</h5>
+      </div>
+    </div>
+  </section>
+  <!-- TERMINAN GARANTIAS -->
+  <!-- COMIENZA FOOTER -->
+  <!-- footer -->
+
+  <footer class="bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <div class="h4">
+            <a href="#" class="h5"><i class="bi bi-bullseye">LasCositasDeMibel</i></a>
+          </div>
+
+          <div class="d-flex">
+            <ul>
+              <li>Centro de ayuda</li>
+              <li>Servicio al consumidor</li>
+              <li>Escríbenos</li>
+              <li>Servicio telefónico</li>
+            </ul>
+            <ul>
+              <li>Política de privacidad</li>
+              <li>Condiciones de compra</li>
+              <li>Opiniones de clientes</li>
+              <li>Aviso de privacidad y cookies</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <h4>subscribete a la newsletter</h4>
+          <div class="input-group my-3">
+            <input type="text" class="form-control" placeholder="suscribete a la newsletter"
+              aria-label="Recipient's username" aria-describedby="button-addon2" />
+            <button class="btn btn-primary" type="button" id="button-addon2">
+              Suscribirse
+            </button>
+          </div>
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+            <label class="form-check-label" for="flexCheckDefault">
+              Acepto la política de privacidad
+            </label>
+          </div>
+
+          <a href="#" class="text-light h4"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light h4">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="text-light h4">
+            <i class="bi bi-messenger"></i>
+          </a>
+          <a href="#" class="text-light h4">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

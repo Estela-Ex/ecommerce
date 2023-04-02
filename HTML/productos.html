@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/CSS/style.css">
+  <!-- CON BOOTSTRAP -->
+  <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    
+    <!-- AQUI TERMINA EL HEAD CON BOOTSTRAP -->
+</head>
+
+<body onload="init()">
+>
+    <!-- EMPIEZA ENCABEZADO -->
+  <header class="container py-4">
+      <div class="row">
+        <div class="col-2">
+          <a href="#" class="h5">
+            <i class="bi bi-bullseye">LasCositasDeMibel</i>
+          </a>
+        </div>
+        <div class="col-8">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Que necesitas buscar"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+            />
+            <button class="btn btn-primary" type="button" id="button-addon2">
+              Ir
+            </button>
+              </div>
+        </div>
+        <div class="col-2 d-grid">
+          <button onclick="redirectToCarrito()"  type="button" class="btn btn-primary position-relative">
+            Carrito <i class="bi bi-cart4"></i>
+            <span
+              id="number-product" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >
+              0
+            </span>
+              <span class="visually-hidden">Productos</span>
+          </button>
+      
+        </div>
+        </div>
+        <div class="row mt-3">
+        <div class="col-6">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Patrones gratis</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Materiales de costura</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">registrate</a>
+            </li>
+            <li class="nav-item">
+              <a href="login.html" class="nav-link" href="#">login/registrate</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </header>
+<!-- TERMINA ENCABEZADO -->
+  <!-- TARJETAS -->
+<section class="container py-4">
+      <div id="container" class="row">
+
+        <!-- PRIMERA TARJETA -->
+        <!-- <div class="col-3">
+          <div class="card">
+            
+            <img
+              src="../assets/images/PRIMERA TARJETA.avif"
+              class="card-img-top"
+              alt="Productos"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 id="nombre-producto" class="card-title">Metro</h5>
+                <span id="precio-producto"
+                  > 5.99 <i class="bi bi-currency-euro text-primary"></i
+                ></span>
+              </div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p id="detalle-producto" class="card-text">
+                La mayor selección de Metros, de diferentes texturas, diferentes colores y diferentes tamaños.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary">Detalles</a>
+                <a onclick="buttonClick('metro-product')" href="#" class="btn btn-warning w-100">Comprar</a>
+               
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- SEGUNDA TARJETA -->
+        <div class="col-3">
+          <div class="card">
+           <div class="fake-img" class="background-image"> <img
+              src="../assets/images/SEGUNDA TARJETA.avif"
+              class="card-img-top"
+              alt="Hilos"
+            />
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Hilos</h5>
+                <span
+                  > 7.99 <i class="bi bi-currency-euro text-primary"></i
+                ></span>
+              </div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p class="card-text">
+                Una gran variedad de hilos para aquellas costuras que tengas pendiente.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary">Detalles</a>
+                <a onclick='buttonClick("hilos-product")' href="#" class="btn btn-warning w-100">Comprar</a>
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TERCERA TARJETA -->
+        <div class="col-3">
+          <div class="card">
+            <img
+              src="../assets/images/TERCERA TARJETA.avif"
+              class="card-img-top"
+              alt="Pasadores de tela"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Pasadores de tela</h5>
+                <span
+                  > 9.99 <i class="bi bi-currency-euro text-primary"></i
+                ></span>
+              </div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p class="card-text">
+               Algo indispensable y que nunca nos puede faltar.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary">Detalles</a>
+                <a onclick='buttonClick("pasadores-product")' href="#" class="btn btn-warning w-100">Comprar</a>
+              
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CUARTA TARJETA -->
+        <div class="col-3">
+          <div class="card">
+            <img
+              src="../assets/images/CUARTA TARJETA.avif"
+              class="card-img-top"
+              alt="Hilos de Crochet"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Hilos de Crochet</h5>
+                <span
+                  >12.99 <i class="bi bi-currency-euro text-primary"></i
+                ></span>
+              </div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p class="card-text">
+                Con esta selección podrás hacer tus mejores costuras.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary">Detalles</a>
+                <a onclick='buttonClick("crochet-product")' href="#" class="btn btn-warning w-100">Comprar</a>
+               
+
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- QUINTA TARJETA -->
+        <div class="col-3">
+          <div class="card">
+            <img
+              src="../assets/images/QUINTA TARJETA.avif"
+              class="card-img-top"
+              alt="Botones"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Botones</h5>
+                <span
+                  >4.99 <i class="bi bi-currency-euro text-primary"></i
+                ></span>
+              </div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p class="card-text">
+                Una gran variedad de botones para tus mejores costuras.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary">Detalles</a>
+                <a onclick='buttonClick("botones-product")' href="#" class="btn btn-warning w-100">Comprar</a>
+              
+
+              </div>
+            </div>
+          </div>
+         </div>
+         <!-- SEXTA TARJETA -->
+<div class="col-3">
+          <div class="card">
+            <img
+              src="../assets/images/SEXTA TARJETA.avif"
+              class="card-img-top"
+              alt="Agujas"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Agujas</h5>
+                <span
+                  >1.99 <i class="bi bi-currency-euro text-primary"></i
+                ></span>
+              </div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p class="card-text">
+                Para cada uno de las costuras necesitas una aguja especial.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary">Detalles</a>
+                <a onclick='buttonClick("agujas-product")' href="#" class="btn btn-warning w-100">Comprar</a>
+                
+
+              </div>
+            </div>
+          </div>
+         </div>
+            <!-- SEPTIMA TARJETA -->
+            <div class="col-3">
+          <div class="card">
+            <img
+              src="../assets/images/SEPTIMA TARJETA.avif"
+              class="card-img-top"
+              alt="Telas"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Telas</h5>
+                <span
+                  >19.99 <i class="bi bi-currency-euro text-primary"></i
+                ></span>
+              </div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p class="card-text">
+                La mayor variedad de las mejores telas para ti.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary">Detalles</a>
+                <a onclick='buttonClick("telas-product") 'href="#" class="btn btn-warning w-100">Comprar</a>
+             
+
+              </div>
+            </div>
+          </div>
+         </div>
+         <!-- OCTAVA TARJETA -->
+         <div class="col-3">
+          <div class="card">
+            <img
+              src="../assets/images/OCTAVA TARJETA.avif"
+              class="card-img-top"
+              alt="Hilos punto de cruz"
+            />
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title">Hilos Punto de Cruz</h5>
+                <span
+                  >6.99 <i class="bi bi-currency-euro text-primary"></i
+                ></span>
+              </div>
+              <div class="text-warning">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <p class="card-text">
+                Sabemos que esto es un imprescindible.
+              </p>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn btn-primary">Detalles</a>
+                <a onclick='buttonClick("cruz-product")' href="#" class="btn btn-warning w-100">Comprar</a>
+                
+
+              </div>
+            </div>
+          </div>
+         </div>
+      </div>
+      
+    </section>
+    <!-- TERMINAN LAS TARJETAS -->
+     <!-- garantias  -->
+
+    <section class="container py-5">
+      <div class="row">
+        <div class="col-3 d-flex gap-3 align-items-center">
+          <i class="bi bi-shield-check text-primary h1"></i>
+          <h5>Pago seguro</h5>
+        </div>
+        <div class="col-3 d-flex gap-3 align-items-center">
+          <i class="bi bi-truck text-primary h1"></i>
+          <h5>Envío gratuito</h5>
+        </div>
+        <div class="col-3 d-flex gap-3 align-items-center">
+          <i class="bi bi-box text-primary h1"></i>
+          <h5>Mejores ofertas</h5>
+        </div>
+        <div class="col-3 d-flex gap-3 align-items-center">
+          <i class="bi bi-bookmark-check text-primary h1"></i>
+          <h5>2 años de garantía</h5>
+        </div>
+      </div>
+    </section>
+    <!-- TERMINAN GARANTIAS -->
+    <!-- COMIENZA FOOTER -->
+    <!-- footer -->
+
+<footer class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+            <div class="h4">
+              <a href="#" class="h5"
+                ><i class="bi bi-bullseye">LasCositasDeMibel</i></a>
+            </div>
+
+            <div class="d-flex">
+              <ul>
+                <li>Centro de ayuda</li>
+                <li>Servicio al consumidor</li>
+                <li>Escríbenos</li>
+                <li>Servicio telefónico</li>
+              </ul>
+              <ul>
+                <li>Política de privacidad</li>
+                <li>Condiciones de compra</li>
+                <li>Opiniones de clientes</li>
+                <li>Aviso de privacidad y cookies</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-4">
+            <h4>subscribete a la newsletter</h4>
+            <div class="input-group my-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="suscribete a la newsletter"
+                aria-label="Recipient's username"
+                aria-describedby="button-addon2"
+              />
+              <button class="btn btn-primary" type="button" id="button-addon2">
+                Suscribirse
+              </button>
+            </div>
+            <div class="form-check mb-4">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Acepto la política de privacidad
+              </label>
+            </div>
+
+            <a href="#" class="text-light h4"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="text-light h4">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="text-light h4">
+              <i class="bi bi-messenger"></i>
+            </a>
+            <a href="#" class="text-light h4">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../JS/productos.js"></script>
+    
+</body>
+
+</html>
